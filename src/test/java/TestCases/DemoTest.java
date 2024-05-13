@@ -8,4 +8,9 @@ public class DemoTest extends DriverManager {
     public void newTest(){
         System.out.println("hello");
     }
+
+    @Test
+    public void newTest2(){
+        System.out.println("hello");
+    }
 }
