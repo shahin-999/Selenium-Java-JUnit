@@ -5,24 +5,24 @@ import manager.DriverManager;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
+import pages.HomePage;
 
 @DisplayName("Test class")
 public class TestMyTest extends DriverManager {
     WebDriver driver = getDriver();
+    HomePage homePage = new HomePage(driver);
 
     @AfterEach
     @DisplayName("Closing Browser")
     public void tearDown(){
-        System.out.println("Before");
         closeDriver();
     }
 
     @Test
     @DisplayName("Navigate to the google and print the base url")
     public void firstTest(){
-        System.out.println(driver);
-        driver.navigate().to(ConfigReader.getInstance().getBaseUrl());
-        String a = ConfigReader.getInstance().getBaseUrl();
+        homePage.navigateToHome();
+        String a = homePage.getPageTitle();
         System.out.println(a);
 
     }

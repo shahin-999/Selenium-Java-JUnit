@@ -21,6 +21,7 @@ target/
 .springBeans
 .sts4-cache
 
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -36,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### allure rport ###
+.allure/
